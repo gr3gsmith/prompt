@@ -1,7 +1,7 @@
 /* #include <cstdio> */
 #include <iostream>
 #include "string_utils.h"
-#include "Colour.h"
+#include "colour.h"
 
 
 int main()

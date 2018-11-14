@@ -48,7 +48,7 @@ public:
     }
     m_chars[tSIZE] = '\0';
   }
-  
+
   constexpr char operator[](const unsigned index) const
   {
     /* static_assert(index <= tSIZE); // Why doesn't this work? */
@@ -87,12 +87,12 @@ constexpr array_string<tSIZE_1 + tSIZE_2> operator+(
 // Length of string (not including terminating null).
 constexpr unsigned length(const char* str)
 {
-    int result = 0;
-    while (*str) {
-        ++result;
-        ++str;
-    }
-    return result;
+  int result = 0;
+  while (*str) {
+    ++result;
+    ++str;
+  }
+  return result;
 }
 
 
