@@ -2,6 +2,7 @@
 #include <iostream>
 #include "string_utils.h"
 #include "colour.h"
+#include "segment.h"
 
 
 int main()
@@ -16,6 +17,8 @@ int main()
 
   std::cout << RED::as_bash.c_str() << std::endl;
   std::cout << to_background<RED>::as_bash.c_str() << std::endl;
+
+  std::cout << segment<RED, RED, length("Hello world")>(make_string("Hello world")).as_bash().c_str() << std::endl;
 }
 
 
