@@ -15,10 +15,11 @@ int main()
   /* auto str3 = str2 + str1; */
   /* std::cout << str3.c_str() << std::endl; */
 
-  std::cout << RED::as_bash.c_str() << std::endl;
-  std::cout << to_background<RED>::as_bash.c_str() << std::endl;
+  /* std::cout << RED::as_bash.c_str() << std::endl; */
+  /* std::cout << to_background<RED>::as_bash.c_str() << std::endl; */
 
-  std::cout << segment<RED, RED, length("Hello world")>(make_string("Hello world")).as_bash().c_str() << std::endl;
+  std::cout << segment<background_colour<RED>, GREEN>(make_string("Hello world")).c_str();
+  std::cout << (DEFAULT::as_bash + background_colour<DEFAULT>::as_bash).c_str() << std::endl;
 }
 
 
