@@ -60,6 +60,8 @@ public:
     return m_chars;
   }
 
+  constexpr static unsigned size = tSIZE;
+
 private:
   char m_chars[tSIZE + 1];
 };
@@ -95,6 +97,25 @@ constexpr unsigned length(const char* str)
   return result;
 }
 
+
+/* namespace number_of_digits_impl { */
+/*   constexpr unsigned number_of_digits_aux(const unsigned num) */
+/*   { */
+/*     if (num == 0) { */
+/*       return 0; */
+/*     } */
+/*     return 1 + number_of_digits_aux(num / 10); */
+/*   } */
+/* } */
+
+
+/* constexpr unsigned number_of_digits(const unsigned num) */
+/* { */
+/*   if (num == 0) { */
+/*     return 1; */
+/*   } */
+/*   return number_of_digits_impl::number_of_digits_aux(num); */
+/* } */
 
 // This implementation of concatenation works but with some fairly nasty restrictions.
 /* template <const char*, typename, const char*, typename> */

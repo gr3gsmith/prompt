@@ -29,4 +29,5 @@ using BLACK = colour<30>;
 using RED = colour<31>;
 using GREEN = colour<32>;
 using DEFAULT = colour<39>;
+using WHITE = colour<97>;
 

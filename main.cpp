@@ -18,8 +18,17 @@ int main()
   /* std::cout << RED::as_bash.c_str() << std::endl; */
   /* std::cout << to_background<RED>::as_bash.c_str() << std::endl; */
 
-  std::cout << segment<background_colour<RED>, GREEN>(make_string("Hello world")).c_str();
-  std::cout << (DEFAULT::as_bash + background_colour<DEFAULT>::as_bash).c_str() << std::endl;
+  std::cout << "PS1=\"\"" << std::endl;
+  
+  auto prompt = segment_sequence(
+    make_segment<RED, GREEN>(make_string("\\w")),
+    segment_sequence(
+      git_segment<WHITE, BLACK>(),
+      end_of_segment_sequence()
+    )
+  );
+
+  std::cout << prompt.as_bash().c_str() << std::endl;
 }
 
 
