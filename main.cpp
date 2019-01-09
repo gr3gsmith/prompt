@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
       std::cout << cygwinPrompt.as_bash().c_str() << std::endl;
     } else if (shellType == "gitbash") {
       auto gitBashPrompt = segment_sequence(
-					    make_segment<GREEN, BLACK>(make_string(" Git Bash ")),
+					    make_segment<LIGHT_BLUE, BLACK>(make_string(" Git Bash ")),
 					    basicPrompt
 					    );
       std::cout << gitBashPrompt.as_bash().c_str() << std::endl;
