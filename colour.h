@@ -12,25 +12,22 @@ struct colour {
 template <typename tCOLOUR>
 struct background_colour : colour<tCOLOUR::value + 10> {};
 
-/* namespace to_background_impl { */
-/*   // Convert a foreground colour to a background colour. */
-/*   template <unsigned tFOREGROUND_VALUE> */
-/*   colour<tFOREGROUND_VALUE + 10> background_equivalent(colour<tFOREGROUND_VALUE>); */
-/* } */
-
-/* template <typename tCOLOUR> */
-/* struct to_background { */
-/*   constexpr static auto as_bash = decltype(to_background_impl::background_equivalent(tCOLOUR()))::as_bash; */
-/* }; */
-
-
 // Specific colour values.
 using BLACK = colour<30>;
 using RED = colour<31>;
 using GREEN = colour<32>;
 using YELLOW = colour<33>;
 using BLUE = colour<34>;
+using MAGENTA = colour<35>;
+using CYAN = colour<36>;
+using LIGHT_GREY = colour<37>;
 using DEFAULT = colour<39>;
 using DARK_GREY = colour<90>;
+using LIGHT_RED = colour<91>;
+using LIGHT_GREEN = colour<92>;
+using LIGHT_YELLOW = colour<93>;
+using LIGHT_BLUE = colour<94>;
+using LIGHT_MAGENTA = colour<95>;
+using LIGHT_CYAN = colour<96>;
 using WHITE = colour<97>;
 
