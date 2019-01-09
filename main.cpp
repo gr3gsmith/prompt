@@ -21,7 +21,7 @@ int main()
   std::cout << "PS1=\"\"" << std::endl;
   
   auto prompt = segment_sequence(
-    make_segment<RED, GREEN>(make_string("\\w")),
+    make_segment<DARK_GREY, WHITE>(make_string(" \\w ")),
     segment_sequence(
       git_segment<WHITE, BLACK>(),
       end_of_segment_sequence()

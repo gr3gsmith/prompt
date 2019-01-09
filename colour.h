@@ -28,6 +28,9 @@ struct background_colour : colour<tCOLOUR::value + 10> {};
 using BLACK = colour<30>;
 using RED = colour<31>;
 using GREEN = colour<32>;
+using YELLOW = colour<33>;
+using BLUE = colour<34>;
 using DEFAULT = colour<39>;
+using DARK_GREY = colour<90>;
 using WHITE = colour<97>;
 
