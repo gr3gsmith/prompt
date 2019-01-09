@@ -2,14 +2,7 @@
 
 #include "string_utils.h"
 #include "colour.h"
-
-constexpr auto segment_separator = make_string("$SEGMENT_SEPARATOR");
-
-template <unsigned tSIZE>
-constexpr auto add_to_prompt(const array_string<tSIZE>& to_add)
-{
-  return make_string("PS1+=\"") + to_add + make_string("\"\n");
-}
+#include "prompt.h"
 
 template <typename tBACKGROUND, typename tFOREGROUND, unsigned tTEXT_SIZE>
 class segment {
@@ -64,7 +57,7 @@ public:
 
 template <typename tFROM, typename tTO>
 struct segment_transition {
-  constexpr static auto as_bash = add_to_prompt(tFROM::as_bash + background_colour<tTO>::as_bash + segment_separator);
+  constexpr static auto as_bash = add_to_prompt(tFROM::as_bash + background_colour<tTO>::as_bash + SEGMENT_SEPARATOR);
 };
 
 template <typename tSEGMENT, typename tNEXT>
